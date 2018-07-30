@@ -1,0 +1,350 @@
+.content-wrapper{
+    background: #fff;
+}
+.flyImg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+}
+.schoolBtn{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.schoolBtn p{
+    font-size: 22px;
+    color: black;
+    margin: 12px 0 12px 0;
+}
+.schoolBtn button{
+    display: inline-block;
+    width: 120px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 8px 12px;
+    font-size: 20px;
+    margin: 12px 12px;
+    outline: none;
+}
+.schoolBtn .btnActive{
+    background: #3da3e3;
+    color: #fff;
+}
+.schoolBtn .left{
+    /* border-right: 1px solid #333; */
+    width: 40%;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5%;
+}
+.schoolBtn .right{
+    width: 40%;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 5%;
+}
+#schoolSubmit{
+    width: 120px;
+    margin-left: 50%;
+    border-radius: 6px;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    padding: 10px 34px;
+    font-size: 20px;
+    background: #3da3e3;
+    clear: both;
+}
+
+.floor{
+    padding: 0 20px;
+    background: #fff;
+}
+.floor h2{
+    font-size: 16px;
+    color: #3da3e3;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 0;
+}
+.floor_p{
+    width: 100%;
+    font-size: 12px;
+}
+.floor_p .sp1::before{
+    content: '';
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    top: -1px;
+    left: 0px;
+    background: red;
+    margin: 0 6px;
+}
+.floor_p .sp2::before{
+    content: '';
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    top: -1px;
+    left: 0px;
+    background: #3da3e3;
+    margin: 0 6px 0 10px;
+}
+.floor_p a{
+    float: right;
+}
+.floor .contidion{
+    font-size: 14px;
+}
+.floor .contidion input{
+    background: none;
+    border-radius: 2px;
+    font-size: 12px;
+    border: 1px solid #333;
+    outline: none;
+    cursor: pointer;
+}
+.floor .contidion .btnActive{
+    background: #3da3e3;
+    border: none;
+    color: #fff;
+}
+.floor ul{
+    overflow: hidden;
+}
+.floor ul li{
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid black;
+    float: left;
+    width: 140px;
+    height: 100px;
+    margin: 20px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 5px;
+    color: #fff;
+    background: #3da3e3;
+    border: none;
+    position: relative;
+}
+
+.floor ul .disabled{
+    background: #F93838;
+}
+.floor ul li span b{
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.room{
+    width: 100%;
+    min-height: 700px;
+    position: relative;
+}
+#backhouse{
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    color: #3da3e3;
+    font-size: 14px;
+    cursor: pointer;
+}
+.room-four{
+    position: relative;
+    width: 900px;
+    height: 720px;
+    margin: auto;
+    background: url(../img/four.jpg) no-repeat center center;
+    background-size: 95% 90%;
+}
+.room-six{
+    position: relative;
+    width: 900px;
+    height: 720px;
+    margin: auto;
+    background: url(../img/six.jpg) no-repeat center center;
+    background-size: 95% 90%;
+}
+.room-eight{
+    position: relative;
+    width: 900px;
+    height: 720px;
+    margin: auto;
+    background: url(../img/eight.jpg) no-repeat center center;
+    background-size: 95% 90%;
+}
+.room-four .bed{
+    position: relative;
+    width: 169px;
+    height: 109px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 109px;
+    color: #fff;
+}
+.bed span{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 3;
+}
+.room-four .right{
+    background: url(../img/bed-four-right.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.room-four .left{
+    background: url(../img/bed-four-left.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.room-four .bed-one{
+    position: absolute;
+    top: 61px;
+    left: 345px;
+}
+.room-four .bed-two{
+    position: absolute;
+    top: 61px;
+    left: 627px;
+}
+.room-four .bed-there{
+    position: absolute;
+    top: 550px;
+    left: 345px;
+}
+.room-four .bed-four{
+    position: absolute;
+    top: 550px;
+    left: 627px;
+}
+
+.room-six .bed{
+    width: 129px;
+    height: 142px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 142px;
+    color: #fff;
+    /* background: red; */
+}
+.room-six .right{
+    background: url(../img/bed-top.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.room-six .left{
+    background: url(../img/bed-bottom.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.room-six .bed-one{
+    position: absolute;
+    top: 61px;
+    left: 300px;
+}
+.room-six .bed-two{
+    position: absolute;
+    top: 61px;
+    left: 430px;
+}
+.room-six .bed-there{
+    position: absolute;
+    top: 61px;
+    left: 582px;
+}
+.room-six .bed-four{
+    position: absolute;
+    top: 61px;
+    left: 712px;
+}
+.room-six .bed-five{
+    position: absolute;
+    top: 517px;
+    left: 563px;
+}
+.room-six .bed-six{
+    position: absolute;
+    top: 517px;
+    left: 693px;
+}
+
+.room-eight .bed{
+    width: 129px;
+    height: 142px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 142px;
+    color: #fff;
+    /* background: red; */
+}
+.room-eight .right{
+    background: url(../img/bed-top.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.room-eight .left{
+    background: url(../img/bed-bottom.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.room-eight .bed-one{
+    position: absolute;
+    top: 61px;
+    left: 300px;
+}
+.room-eight .bed-two{
+    position: absolute;
+    top: 61px;
+    left: 430px;
+}
+.room-eight .bed-there{
+    position: absolute;
+    top: 61px;
+    left: 582px;
+}
+.room-eight .bed-four{
+    position: absolute;
+    top: 61px;
+    left: 712px;
+}
+.room-eight .bed-five{
+    position: absolute;
+    top: 517px;
+    left: 299px;
+}
+.room-eight .bed-six{
+    position: absolute;
+    top: 517px;
+    left: 429px;
+}
+.room-eight .bed-seven{
+    position: absolute;
+    top: 517px;
+    left: 581px;
+}
+.room-eight .bed-eight{
+    position: absolute;
+    top: 517px;
+    left: 711px;
+}
+h3{
+    font-size: 16px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}

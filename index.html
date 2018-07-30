@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>锋舍</title>
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: url(img/loginbg.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .login_body{
+            height: 69%;
+            width: 65%;
+            position: absolute;
+            left: 52%;
+            top: 51%;
+            transform: translate(-50%,-50%);
+        }
+        .login_title{
+            font-size: 30px;
+            color: #000;
+            width: 32%;
+            position: absolute;
+            top: 26%;
+            left: 10%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .login_title img{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 3px;
+            margin-right: 10px;
+        }
+        .login_item{
+            width: 46%;
+            border-bottom: 1px solid #666;
+            font-size: 18px;
+            position: absolute;
+            top: 46%;
+            left: 10%;
+        }
+        .login_item input{
+            background: none;
+            border: none;
+            outline: none;
+            line-height: 22px;
+            height: 22px;
+            width: 80%;
+            margin-left: 10%;
+            font-size: 16px;
+        }
+        .secondItem{
+            margin-top: 50px;
+        }
+        ::-webkit-input-placeholder{
+            font-size: 16px;
+            color: #666;
+            line-height: 22px;
+        }
+        .thirdItem{
+            width: 46%;
+            height: 12px;
+            color: #666;
+            font-size: 12px;
+            position: absolute;
+            top: 66%;
+            left: 10%;
+        }
+        .thirdItem span:nth-of-type(1){
+            margin-right: 55%;
+        }
+        .thirdItem input{
+            line-height: 12px;
+            height: 12px;
+            margin: 0 10px 0 0;
+            width: 12px;
+            border: 1px solid black;
+        }
+        .login{
+            /* border: none; */
+            height: 54px;
+            position: absolute;
+            border: none;
+            top: 74%;
+            left: 10%;
+        }
+        .login button{
+            width: 54%;
+            height: 100%;
+            border-radius: 5px;
+            font-size: 24px;
+            line-height: 54px;
+            color: #fff;
+            background: #01A3E0;
+            letter-spacing: 20px;
+            text-align: center;
+            text-indent: 20px;
+            position: absolute;
+            margin-left: -30%;
+            left: 50%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        b{
+            font-weight: normal;
+            position: absolute;
+            top: 5px;
+            left: 110%;
+            font-size: 14px;
+            color: red;
+            width: 180px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_body">
+        <p class="login_title">
+            <img src="img/logo2.png" alt="">锋舍管理系统
+        </p>
+        <div class="login_item">
+            <i class="fa fa-user"></i><input type="text" name="username" id="username" placeholder="请输入用户名">
+            <b>用户名有误!</b>
+        </div>
+        <div class="login_item secondItem">
+            <i class="fa fa-lock"></i><input type="password" name="password" id="password" placeholder="请输入密码">
+            <b>密码不正确！</b>
+        </div>
+        <div class="thirdItem">
+            <input type="checkbox"><span>记住密码</span><span>忘记密码?</span>
+        </div>
+        <div class="login_item login">
+            <button id="btn">登录</button>
+        </div>
+    </div>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script>
+        //登录验证
+        function login(){
+            var username = $('#username').val()
+            var password = $('#password').val()
+            if( !username || !password ){
+                $('#username').next().text('用户名或密码不能为空！')
+                $('#password').next().css({display: "none"})
+                $('#username').next().css({display: "inline"})
+            }
+            else if( username != 'admin' ){
+                $('#username').next().text('用户名有误！')
+                $('#password').next().css({display: "none"})
+                $('#username').next().css({display: "inline"})
+            }
+            else if( password != '12345678' ){
+                $('#username').next().css({display: "none"})
+                $('#password').next().css({display: "inline"})
+            }
+            else location.href = "school.html"
+        }
+        document.getElementById("btn").onclick = login
+        document.onkeyup = function(e){
+            if(e.keyCode == 13) login()
+        }
+
+        //本地存储数据
+        $.ajax({
+            url: 'data/data.json'
+        }).then( res =>{
+            localStorage.setItem('data', JSON.stringify(res))
+        } )
+    </script>
+</body>
+</html>
