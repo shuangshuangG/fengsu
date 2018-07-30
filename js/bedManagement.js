@@ -21,7 +21,7 @@ $("#back").on('click',function(){
 
 function loadhouse(){
     //局部加载房间页
-    $(".content-wrapper").load("../../model/floor.html",function(){
+    $(".content-wrapper").load("../model/floor.html",function(){
         // $(".contidion input").on('click',houseOpt.bind(1))
         $(".contidion input").bind('click',{data: "abc"},buildOpt)
 
@@ -30,13 +30,13 @@ function loadhouse(){
             var type = $(this).attr("roomType")
             switch(type){
                 case "four":
-                    $(".content-wrapper").load('../../model/quadRoom.html',houseOpt)
+                    $(".content-wrapper").load('../model/quadRoom.html',houseOpt)
                     break
                 case "six":
-                    $(".content-wrapper").load('../../model/sixRoom.html',houseOpt)
+                    $(".content-wrapper").load('../model/sixRoom.html',houseOpt)
                     break
                 case "eight":
-                    $(".content-wrapper").load('../../model/eightRoom.html',houseOpt)
+                    $(".content-wrapper").load('../model/eightRoom.html',houseOpt)
                     break
             }
         })
